@@ -1,0 +1,13 @@
+{
+  "name": "fake-https-cert",
+  "version": "1.0.0",
+  "description": "Fake HTTPS/SSL Certificate to quikly get https://localhost working",
+  "main": "index.js",
+  "author": "Elad Ossadon",
+  "license": "MIT",
+  "dependencies": {
+    "del": "^6.0.0",
+    "find-cache-dir": "^3.3.1",
+    "selfsigned": "^1.10.8"
+  }
+}

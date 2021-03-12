@@ -1,5 +1,7 @@
 'use strict';
 
+// source: https://github.com/webpack/webpack-dev-server/blob/master/lib/utils/createCertificate.js
+
 const selfsigned = require('selfsigned');
 
 function createCertificate(attributes) {

@@ -1,5 +1,7 @@
 "use strict";
 
+// source: https://github.com/webpack/webpack-dev-server/blob/master/lib/utils/getCertificate.js
+
 const path = require("path");
 const fs = require("fs");
 const os = require("os");

@@ -24,9 +24,37 @@ const httpsOptions = {
 };
 
 createServer(httpsOptions, (req, res) => {
-  const parsedUrl = parse(req.url, true);
-  handle(req, res, parsedUrl);
+  const urlObj = parse(req.url, true);
+  handle(req, res, urlObj);
 }).listen(3000, () => {
   console.log("> Server started on https://localhost:3000");
+});
+```
+
+### Usage with Next.js
+
+Create a `server.js`, run with `node server.js` instead of `yarn dev`.
+
+```js
+const { createServer } = require("https");
+const next = require("next");
+const fakeHttpsCert = require("fake-https-cert");
+const dev = process.env.NODE_ENV !== "production";
+const app = next({ dev });
+const handle = app.getRequestHandler();
+const fakeCert = fakeHttpsCert(console);
+
+const httpsOptions = {
+  key: fakeCert,
+  cert: fakeCert,
+};
+app.prepare().then(() => {
+  createServer(httpsOptions, (req, res) => {
+    const url = 'https://' + req.headers.host + req.url;
+    const urlObj = new URL(url);
+    handle(req, res, urlObj);
+  }).listen(3000, () => {
+    console.log("> Server started on https://localhost:3000");
+  });
 });
 ```

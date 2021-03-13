@@ -58,3 +58,11 @@ app.prepare().then(() => {
   });
 });
 ```
+
+### Browser Support
+
+Welp, browsers don't really like it, but if you enable this certificate manually, they'll forgive you.
+
+<img src="docs/1.png" width="400"><br>
+
+<img src="docs/2.png" width="400">

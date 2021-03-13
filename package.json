@@ -1,7 +1,11 @@
 {
   "name": "fake-https-cert",
-  "version": "1.0.0",
-  "description": "Fake HTTPS/SSL Certificate to quikly get https://localhost working",
+  "version": "1.0.1",
+  "description": "Fake HTTPS/SSL Certificate to quickly get https://localhost working",
+  "repository": {
+    "url": "https://github.com/elado/fake-https-cert"
+  },
+  "types": "./index.d.ts",
   "main": "index.js",
   "author": "Elad Ossadon",
   "license": "MIT",

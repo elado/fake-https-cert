@@ -3,6 +3,9 @@
 > Create fake SSL certificates for `https://localhost` to work.
 > Shamelessly stolen from `webpack-dev-server`.
 
+**Before using this, be sure to look at [mkcert](https://github.com/FiloSottile/mkcert)**
+
+
 ## Install
 
 ```sh
